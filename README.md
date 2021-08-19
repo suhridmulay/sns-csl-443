@@ -3,4 +3,4 @@
 ## Assignments
 
 ### Assignment 1
-Find the gcd of a set of integers
+Find the gcd of a set of integers entered via command line arguments

@@ -3,8 +3,6 @@
 #include <stdarg.h>
 #include <gmp.h>
 
-#define DEBUG 1;
-
 int mpz_custom_gcd(mpz_t result, mpz_t a, mpz_t b) {
 	// Create store to store our gcd
 	mpz_t g;
@@ -35,9 +33,7 @@ int main(int argc, char *argv[]) {
 	
 
 	for (int i = 1; i < argc; i++) {
-		gmp_printf("Attempting to swallow number: %s\n", argv[i]);
-		mpz_init_set_str(nums[i - 1], argv[i], 10);
-		gmp_printf("Swallowed number as: %Zd\n", nums[i - 1]);
+		mpz_init_set_str(nums[number_of_numbers], argv[i], 10);
 		number_of_numbers += 1;
 	}
 
