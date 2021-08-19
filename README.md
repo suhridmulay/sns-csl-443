@@ -1,4 +1,6 @@
 # Code for SNS course
 
 ## Assignments
-// placeholder text for now
+
+### Assignment 1
+Find the gcd of a set of integers
