@@ -57,7 +57,5 @@ int main(int argc, char *argv[]) {
 	mpz_set_str(number, argv[1], 10);
 	pf(number);
 	gmp_printf("\n");
-
-	prime_factorization(nfacs, number);
 	return 0;
 }
