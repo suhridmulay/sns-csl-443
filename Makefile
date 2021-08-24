@@ -15,5 +15,8 @@ assignment1: src/assg1.c
 assignment2: src/assg2.c
 	$(CC) $(CFLAGS) $(LFLAGS) src/assg2.c -o build/assg2
 
+assignment3: src/assg3.c
+	$(CC) $(CFLAGS) $(LFLAGS) src/assg3.c -o build/assg3
+
 clean: build/*
 	rm -i build/*
