@@ -77,6 +77,7 @@ int inverse(mpz_t inv, mpz_t number, mpz_t modulo) {
 	mpz_t temp, gcd;
 	extended_euclidean(gcd, inv, temp, number, modulo);
 	mpz_clears(temp, gcd, NULL);
+	return 0;
 }
 
 
