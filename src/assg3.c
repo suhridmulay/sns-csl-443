@@ -14,7 +14,7 @@ int pf(mpz_t number) {
     mpz_mod(remainder, num, factor);
     while (mpz_cmp_ui(remainder, 0) == 0)
     {
-        gmp_printf("Factor: %Zd\n", factor);
+        gmp_printf(" %Zd ", factor);
         mpz_divexact(num, num, factor);
         mpz_mod(remainder, num, factor);
     }
@@ -28,7 +28,7 @@ int pf(mpz_t number) {
         // Extract all its ocurrences
         while (mpz_cmp_ui(remainder, 0) == 0)
         {
-            gmp_printf("Factor: %Zd\n", factor);
+            gmp_printf(" %Zd ", factor);
             mpz_divexact(num, num, factor);
             mpz_sqrt(root_n, num);
             mpz_mod(remainder, num, factor);
@@ -38,7 +38,7 @@ int pf(mpz_t number) {
     // Which is a complement of the ones we found earlier
     if (mpz_cmp_ui(num, 2) > 0)
     {
-        gmp_printf("Factor: %Zd", num);
+        gmp_printf(" %Zd ", num);
     }
     return 0;
 }

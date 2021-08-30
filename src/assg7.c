@@ -73,13 +73,6 @@ int extended_euclidean(mpz_t g, mpz_t a, mpz_t b, mpz_t x, mpz_t y)
 	return 0;
 }
 
-int inverse(mpz_t inv, mpz_t number, mpz_t modulo) {
-	mpz_t temp, gcd;
-	extended_euclidean(gcd, inv, temp, number, modulo);
-	mpz_clears(temp, gcd, NULL);
-	return 0;
-}
-
 
 
 int main(int argc, char * argv[]) {
@@ -99,11 +92,11 @@ int main(int argc, char * argv[]) {
 	extended_euclidean(gcd, inverse, temp, number, modulo_base);
 
 	if (mpz_cmp_ui(gcd, 1) != 0) {
-		gmp_printf("No solution exists\n");
+		gmp_printf("N\n");
 	} else {
 		mpz_mul(multiplier, result, inverse);
 		mpz_mod(multiplier, multiplier, modulo_base);
-		gmp_printf("The solution is %Zd (mod %Zd)\n", multiplier, modulo_base);
+		gmp_printf("Y %Zd (mod %Zd)\n", multiplier, modulo_base);
 	}
 
 	return 0;   

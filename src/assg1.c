@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
 		mpz_custom_gcd(g, nums[i], g);
 	}
 
-	gmp_printf("Required gcd is: %Zd\n", g);
+	gmp_printf("%Zd\n", g);
 	
 
 	return 0;

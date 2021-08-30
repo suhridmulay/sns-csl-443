@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
         mpz_init(g);
         mpz_gcd(g, iterator, number);
         if (mpz_cmp_ui(g, 1) == 0) {
-            gmp_printf("RRSM member (modulo %Zd): %Zd\n", number, iterator);
+            gmp_printf(" %Zd (modulo %Zd)\n", iterator, number);
             mpz_increment(number_of_numbers, 1);
         }
     }

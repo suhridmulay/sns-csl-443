@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 
     do {
         if (mpz_cmp_ui(iterator, 1) == 0) {
-            gmp_printf("Found Order: %Zd\n", power);
+            gmp_printf("Y %Zd\n", power);
             exit(0);
         }
         mpz_mul(iterator, iterator, number);
@@ -27,5 +27,5 @@ int main(int argc, char *argv[]) {
         mpz_mod(iterator, iterator, modulo_base);
     } while (mpz_cmp(iterator, number) != 0);
 
-    gmp_printf("No order exists. powers repeated after %Zd\n", power);
+    gmp_printf("N\n");
 }

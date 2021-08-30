@@ -3,7 +3,7 @@
 #include <stdarg.h>
 #include <gmp.h>
 
-int fermats_little_theorem(mpz_t number, mpz_t power, mpz_t modulo) {
+int exp(mpz_t number, mpz_t power, mpz_t modulo) {
     int steps = 0;
 
     mpz_t start;
@@ -17,7 +17,7 @@ int fermats_little_theorem(mpz_t number, mpz_t power, mpz_t modulo) {
 
     for (int i = 0; i < size; i++) {
         int bit = mpz_tstbit(power, i);
-        gmp_printf("bit at position %d of \'power\' is %d\n", i, bit);
+        gmp_printf("bit at position %d of \'%Zd\' is %d\n", i, power, bit);
 
         if (bit == 1) {
             gmp_printf("Since bit is 1 we incorporate the exponent (%Zd) into final result\n", exponent);
@@ -52,5 +52,5 @@ int main(int argc, char * argv[]) {
     mpz_set_str(power, argv[2], 10);
     mpz_set_str(modulo, argv[3], 10);
 
-    fermats_little_theorem(number, power, modulo);
+    exp(number, power, modulo);
 }

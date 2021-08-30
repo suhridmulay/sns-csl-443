@@ -88,8 +88,8 @@ int main(int argc, char * argv[]) {
 
     extended_euclidean(g, a, b, x, y);
     if (mpz_cmp_ui(g, 1) != 0) {
-        gmp_printf("No inverse exists\n");
+        gmp_printf("N\n");
     } else {
-        gmp_printf("Inverse exists: %Zd\n", a);
+        gmp_printf("Y %Zd\n", a);
     }
 }

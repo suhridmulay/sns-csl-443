@@ -84,19 +84,10 @@ int main(int argc, char *argv[])
 	mpz_set_str(x, argv[1], 10);
 	mpz_set_str(y, argv[2], 10);
 
-	// Read the numbers from argc
-	/*
-	for (int i = 1; i < argc; i++)
-	{
-		mpz_init_set_str(nums[number_of_numbers], argv[i], 10);
-		number_of_numbers += 1;
-	}
-	*/
-
 	mpz_t a, b;
 	mpz_init(a);
 	mpz_init(b);
 
 	extended_euclidean(a, b, x, y);
-	gmp_printf("Coefficients are: %Zd and %Zd\n", a, b);
+	gmp_printf("%Zd, %Zd\n", a, b);
 }
