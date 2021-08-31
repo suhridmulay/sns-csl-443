@@ -4,7 +4,7 @@
 #include <assert.h>
 #include <gmp.h>
 
-#define DEBUG_MODE (1 == 0)
+#define DEBUG_MODE (1 == 1)
 
 /**
  * Uses extended euclidean algorithm to calculate coefficients and gcd
