@@ -46,7 +46,17 @@ int main(int argc, char *argv[]) {
 		mpz_custom_gcd(g, nums[i], g);
 	}
 
-	gmp_printf("%Zd\n", g);
+	mpz_t i;
+	for (mpz_init_set_ui(i, 2); mpz_cmp(i, g) < 0; mpz_add_ui(i, i, 1)) {
+		mpz_t mod;
+		mpz_init(mod);
+		mpz_mod(mod, g, i);
+		if (mpz_cmp_ui(mod, 0) == 0) {
+			gmp_printf(" %Zd ", i);
+		}
+	}
+
+	gmp_printf(" %Zd\n", g);
 	
 
 	return 0;

@@ -4,8 +4,16 @@
 #include <assert.h>
 #include <gmp.h>
 
-#define DEBUG_MODE 1
+#define DEBUG_MODE (1 == 0)
 
+/**
+ * Uses extended euclidean algorithm to calculate coefficients and gcd
+ * @param g stores gcd of given numbers
+ * @param a stores first extended euclidean coefficient
+ * @param b stores second extended euclidean coefficient
+ * @param x extended eucliden first number
+ * @param y extended euclidean algorithm input second number
+*/
 int extended_euclidean(mpz_t g, mpz_t a, mpz_t b, mpz_t x, mpz_t y)
 {
     mpz_t old_r, r;
